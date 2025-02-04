@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ApiTests" verbose="1" parallel="tests" thread-count="2">
+    <test name="OrderApiTests">
+        <classes>
+            <class name="PlaceOrderApiTest"/>
+            <class name="GetPlacedOrderApiTest"/>
+            <class name="DeletePlacedOrder"/>
+            <class name="GetOrderTestAfterDelete"/>
+        </classes>
+    </test>
+
+    <test name="UsersApiTests">
+        <classes>
+            <class name="CreateUserApiTest"/>
+            <class name="GetUserApiTest"/>
+            <class name="UpdateUserApiTest"></class>
+            <class name="GetUserAfterUpdateTest"></class>
+            <class name="LoginUserApiTest"></class>
+            <class name="LogoutUserApiTest"></class>
+            <class name="DeleteUserApiTest"></class>
+        </classes>
+    </test>
+    <test name="OrderApiTestsInvalidData">
+        <classes>
+            <class name="PlaceOrderWrongData"/>
+        </classes>
+    </test>
+</suite>
